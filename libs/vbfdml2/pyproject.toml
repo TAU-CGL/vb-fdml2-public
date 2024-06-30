@@ -1,0 +1,29 @@
+[build-system]
+requires = ["scikit-build-core", "pybind11"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "vbfdml2"
+version = "1.0.0"
+description = "New version of (voxel-based approximation of) few distance-measurement localization, with support for uncertain environments."
+readme = "README.md"
+authors = [
+    { name = "Michael Bilevich", email = "michaelmoshe@mail.tau.ac.il" },
+    { name = "Shahar Guini Menashe", email = "shaharguini@mail.tau.ac.il" },
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.scikit-build]
+wheel.expand-macos-universal-tags = true
+
+
+[tool.cibuildwheel]
+build-verbosity = 1
